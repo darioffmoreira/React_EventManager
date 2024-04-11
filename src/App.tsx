@@ -4,18 +4,17 @@ interface myBottonProps {
 }
 
 function MyButton(props:myBottonProps) {
-  console.log(props); 
-  return <button className="button">{props.title}</button>
+  // console.log(props); 
+  return <button className="bg-orange-400 h-10 px-3 rounded font-medium">{props.title}</button>
 }
 
 export function App() {
   return (
-    <div>
+    <div className="flex gap-2">
       <MyButton title="Click here!" alt="text" />
       <MyButton title="text1" alt="text" />
       <MyButton title="text2" alt="text" />
-      <MyButton title="text3" alt="text" />
-      <p>oi</p>
+      <MyButton title="oi" alt="text" />
     </div>
   )
 }
