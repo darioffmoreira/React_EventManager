@@ -1,7 +1,9 @@
+import eventIcon from '../assets/event-icon.svg'
+
 export function Header() {
   return (
     <div>
-      header
+      <img src={eventIcon} alt="" />
     </div>
   )
 }
