@@ -1,7 +1,7 @@
 export function AttendeeList() {
   return (
     <h1>
-      Participantes!
+      Participants!
     </h1>
   )
 }
