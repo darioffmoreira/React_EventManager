@@ -11,8 +11,8 @@ export function AttendeeList() {
         </div>
       </div>
 
-      <div className='border border-white/30 rounded-lg'>
-        <table className='w-full'>
+      <div className='overflow-x-auto border border-white/30 rounded-lg'>
+        <table className='min-w-max w-full table-auto'>
           <thead>
             <tr className='border-b border-white/30'>
               <th style={{ width: 48 }} className="py-3 px-4 text-sm font-semibold text-left">
