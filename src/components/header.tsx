@@ -7,8 +7,8 @@ export function Header() {
       <img src={eventIcon} alt="" />
 
       <nav className="flex items-center gap-5">
-        <NavLink>Events</NavLink>
-        <NavLink>Participants</NavLink>
+        <NavLink href="/events">Events</NavLink>
+        <NavLink href="/participants">Participants</NavLink>
       </nav>
 
     </div>
