@@ -58,7 +58,7 @@ export function AttendeeList() {
         <tfoot>
           <tr>
             <TableCell colSpan={3}>Showing 10 of 228 items</TableCell>
-            <td className='text-right' colSpan={3}>
+            <TableCell className='text-right' colSpan={3}>
               <div className='inline-flex gap-8'>
                 <span>Page 1 of 11</span> 
                 <div className='flex gap-1.5'>
@@ -76,7 +76,7 @@ export function AttendeeList() {
                   </IconButton>
                 </div>
               </div>
-            </td>
+            </TableCell>
           </tr>
         </tfoot>
       </Table>
