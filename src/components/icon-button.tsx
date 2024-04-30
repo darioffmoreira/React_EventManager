@@ -15,4 +15,3 @@ export function IconButton({ transparent, ...props }: IconButtonProps) {
     />
   )
 }
-
