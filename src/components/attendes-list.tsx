@@ -1,4 +1,6 @@
 import { Search, MoreHorizontal, ChevronLeft, ChevronsLeft, ChevronRight, ChevronsRight } from 'lucide-react';
+import { formatRelative } from 'date-fns';
+import { pt } from 'date-fns/locale';
 import { IconButton } from './icon-button';
 import { Table } from './table/table';
 import { TableHeader } from './table/table-header';
@@ -56,8 +58,8 @@ export function AttendeeList() {
                     <span>{attendee.email}</span>
                   </div>
                 </TableCell>
-                <TableCell>{attendee.createdAt.toISOString()}</TableCell>
-                <TableCell>{attendee.checkedInAt.toISOString()}</TableCell>
+                <TableCell>{formatRelative(attendee.createdAt, new Date(), { locale: pt })}</TableCell>
+                <TableCell>{formatRelative(attendee.checkedInAt, new Date(), { locale: pt })}</TableCell>
                 <TableCell>
                   <IconButton transparent={true}>
                     <MoreHorizontal className='size-4' />
