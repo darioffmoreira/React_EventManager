@@ -4,8 +4,16 @@ import { Table } from './table/table';
 import { TableHeader } from './table/table-header';
 import { TableCell } from './table/table-cell';
 import { TableRow } from './table/table-row';
+import { ChangeEvent, useState } from 'react';
 
 export function AttendeeList() {
+
+  const [valueFromInput, changeValueFromInput] = useState('');
+
+  function onSearchInputChanged(event: ChangeEvent<HTMLInputElement>) {
+    changeValueFromInput(event.target.value);
+  }
+
   return (
     <div className='flex flex-col gap-4'>
 
@@ -13,8 +21,10 @@ export function AttendeeList() {
         <h1 className="text-2xl font-bold">Participants!</h1>
         <div className="flex items-center gap-3 px-3 w-72 py-1.5 border border-white/25 rounded-lg">
           <Search className='size-4 text-emerald-300' /> 
-          <input className="bg-transparent flex-1 outline-none border-0 p-0 text-sm" placeholder="Search for participants" type="text" />
+          <input onChange={onSearchInputChanged} className="bg-transparent flex-1 outline-none border-0 p-0 text-sm" placeholder="Search for participants" type="text" />
         </div>
+
+        { valueFromInput }
       </div>
 
       
