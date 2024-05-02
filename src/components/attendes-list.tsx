@@ -8,10 +8,10 @@ import { ChangeEvent, useState } from 'react';
 
 export function AttendeeList() {
 
-  const [valueFromInput, changeValueFromInput] = useState('');
+  const [search, setSearch] = useState('');
 
   function onSearchInputChanged(event: ChangeEvent<HTMLInputElement>) {
-    changeValueFromInput(event.target.value);
+    setSearch(event.target.value);
   }
 
   return (
@@ -24,7 +24,7 @@ export function AttendeeList() {
           <input onChange={onSearchInputChanged} className="bg-transparent flex-1 outline-none border-0 p-0 text-sm" placeholder="Search for participants" type="text" />
         </div>
 
-        { valueFromInput }
+        { search }
       </div>
 
       
