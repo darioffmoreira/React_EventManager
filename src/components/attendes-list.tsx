@@ -76,10 +76,10 @@ export function AttendeeList() {
         </tbody>
         <tfoot>
           <tr>
-            <TableCell colSpan={3}>Showing 10 of 228 items</TableCell>
+            <TableCell colSpan={3}>Showing 10 of {attendees.length} items</TableCell>
             <TableCell className='text-right' colSpan={3}>
               <div className='inline-flex gap-8'>
-                <span>Page 1 of 11</span> 
+                <span>Page {page} of {Math.ceil(attendees.length / 10)}</span> 
                 <div className='flex gap-1.5'>
                   <IconButton>
                       <ChevronsLeft className='size-4' />
