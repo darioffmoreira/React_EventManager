@@ -16,6 +16,7 @@ dayjs.locale('en');
 export function AttendeeList() {
 
   const [search, setSearch] = useState('');
+  const [page, setPage] = useState(1);
 
   function onSearchInputChanged(event: ChangeEvent<HTMLInputElement>) {
     setSearch(event.target.value);
@@ -49,7 +50,7 @@ export function AttendeeList() {
           </tr>
         </thead>
         <tbody> 
-          {attendees.map((attendee) => {
+          {attendees.slice((page - 1) * 10, page * 10).map((attendee) => {
             return (
               <TableRow key={attendee.id}>
                 <TableCell>
