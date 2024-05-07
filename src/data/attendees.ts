@@ -11,4 +11,4 @@ export const attendees = Array.from({ length: 200 }).map(() => {
 });
 
 // Order attendees by createdAt from most recent to oldest
-attendees.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+attendees.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime()); 
