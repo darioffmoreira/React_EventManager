@@ -1,12 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import {App} from './app.tsx'
-import './index.css'
+import React from 'react';
+import { createRoot } from 'react-dom/client'; // Import createRoot from react-dom/client
+import { App } from './app';
+import './index.css';
 
-// componentes e propriedades
+// Define the container element where you want to mount your React application
+const container = document.getElementById('root');
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+// Check if the container element exists before rendering
+if (container) {
+  createRoot(container).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+} else {
+  console.error('Container element not found');
+}
